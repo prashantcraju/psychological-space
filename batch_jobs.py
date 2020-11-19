@@ -30,7 +30,7 @@ if __name__ == "__main__":
     beta_vals = np.arange(.25,4.5,.25)
     
     for beta in beta_vals:
-        path = '{}{}'.format('trained_vae_beta_val_3.0',beta)
+        path = '{}{}'.format('trained_vae_beta_val_',beta)
         vae = VAE((32, 32, 3),1024, beta)
         vae.fit(dataset, 15, True, path)
 
